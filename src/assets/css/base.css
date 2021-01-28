@@ -1,0 +1,91 @@
+html,
+body,
+div,
+span,
+p,
+a,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+form,
+ul,
+li,
+textarea,
+ol {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Microsoft YaHei', '宋体', 'Arial', '黑体', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+.color_fff {
+  color: #ffffff;
+}
+
+.theme_color {
+  color: #f53a35;
+}
+
+/* 字体颜色 */
+.black_color {
+  color: #222;
+}
+
+.gray_color {
+  color: #7d7c7c;
+}
+
+.yellow_color {
+  color: #ff9d24;
+}
+
+/* flex布局 */
+.flex_between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_bea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex_align {
+  display: flex;
+  align-items: center;
+}
