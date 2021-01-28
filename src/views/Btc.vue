@@ -209,8 +209,8 @@ export default {
           }
           el.time = this.getFormatDate(el.id)
           let arr2 = [el.time, el.open, el.close, el.low, el.high, el.vol]
-          let lastData = this.chartData[this.chartData.length-1] && this.chartData[this.chartData.length-1]
-          let flag = arr2 && arr2[0] == lastData
+          let lastDate = this.chartData[this.chartData.length-1] && this.chartData[this.chartData.length-1][0]
+          let flag = arr2[0] && arr2[0] == lastDate
           if(flag) {
             this.chartData.splice(this.chartData.length-1,1,arr2)
           }
