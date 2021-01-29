@@ -27,4 +27,6 @@
 
 ## 火币接口参考文档 https://www.cnblogs.com/zhuminghui/p/8977417.html
 
+## GitHub Pages https://java0088.github.io/vue-kline/dist/#/
+
 如果这个能帮助到你, 请点击 star 来支持我噢. ^\_^
