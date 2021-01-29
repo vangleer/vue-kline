@@ -1,6 +1,7 @@
 {
   "name": "vue-kline",
   "version": "0.1.0",
+  "author": "前端小通",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
