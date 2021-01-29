@@ -1,7 +1,23 @@
 # vue-kline (使用 Vue 对接火币 k 线图数据)
 
-## 图片参考
-
 ## 使用技术 Vue、Echarts、WebSocket
 
-## 借口参考文档 https://www.cnblogs.com/zhuminghui/p/8977417.html
+## 说明
+
+- 该项目仅供参考，直接下载到本地运行查看
+- 下载项目后，npm install 一下
+- npm run serve 运行项目查看效果
+
+## 图片参考
+
+<p align="center">
+    <img src="https://java0088.github.io/vue-kline/dist/img/theme1.png" alt="npm version" />
+</p>
+<p align="center">
+    <img src="https://java0088.github.io/vue-kline/dist/img/theme2.png" alt="npm version" />
+</p>
+<p align="center">
+    <img src="https://java0088.github.io/vue-kline/dist/img/theme3.png" alt="npm version" />
+</p>
+
+## 火币接口参考文档 https://www.cnblogs.com/zhuminghui/p/8977417.html
