@@ -2,10 +2,10 @@
   <div class="k-tab-bar" :style="{backgroundColor,color}" :class="{border:border}">
     <div class="k-tab-bar-item" 
       v-for="(item,index) in list" :key="index" 
-      :style="{color:index===parseInt(value) ? activeColor:color}"
+      :style="{color:index===value ? activeColor:color}"
       @click="handleItemClick(item,index)"
     >
-      <img class="k-tab-icon" :src="index===parseInt(value)?item.activeImg:item.img" alt="">
+      <span class="k-icon" :class="[index===value?item.activeIcon:item.icon]"></span>
       <span class="k-tab-text">{{item.cnName}}</span>
     </div>
   </div>
@@ -16,7 +16,7 @@ export default {
  
   props:{
       value:{
-        type: [String, Number],
+        type: Number,
         default: 0
       },
       backgroundColor:{
@@ -25,7 +25,7 @@ export default {
       },
       color:{
         type:String,
-        default:'#131f31'
+        default:'#6b809b'
       },
       list:{
         type:Array,
@@ -33,7 +33,7 @@ export default {
       },
       activeColor: {
         type:String,
-        default:'#1989fa'
+        default:'#54c6b7'
       },
       border:{
         type:Boolean
@@ -41,10 +41,12 @@ export default {
   },
   data() {
     return {
+
     }
   },
   methods:{
     handleItemClick(item,index) {
+      this.$router.push(`/?type=${index}&name=${item.name}&enName=${item.enName}`)
       this.$emit('input',index)
     }
   }
@@ -60,10 +62,14 @@ export default {
     width: 100vw;
     height: 50px;
   }
+  .k-icon {
+    font-size: 18px;
+  }
   .k-tab-bar-item {
     flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
   .k-tab-icon {
@@ -71,7 +77,7 @@ export default {
     height: 22px;
   }
   .k-tab-text {
-    font-size: 15px;
+    font-size: 14px;
     margin-top: 4px;
   }
   .border {

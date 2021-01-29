@@ -72,6 +72,7 @@
 import echarts from "echarts"
 import pako from 'pako'
 import utils from '../utils/utils.js'
+import {colors} from '../config/index'
 export default {
   data() {
     return {
@@ -83,6 +84,7 @@ export default {
           { text: '1小时',opt: '60min' },
           { text: '4小时',opt: '4hour' }
         ],
+        usdtPrice:8, // https://api.huobiasia.vip/market/tickers 可以调用这个借口获取，这里默认为8
         currentNav:0,
         currencyInfo: {name:'btcusdt',enName:'BTC'},
         bgImg: require("../assets/imgs/bg2.png"),
@@ -98,7 +100,6 @@ export default {
         interval: null,
         flag: false,
          // K 线相关
-        hburl: 'wss://api.huobipro.com/ws',
         haurl:'wss://api.huobiasia.vip/ws',
         requestK: {req: 'market.eosusdt.kline.1min'},
         subK:{sub: 'market.eosusdt.kline.1min'},
@@ -108,22 +109,23 @@ export default {
         Zend: 90
     }
   },
-  activated() {
-    // 更改k线图请求接口
-    this.requestK.req = `market.${this.currencyInfo.name}.kline.1min`
-    this.subK.sub = `market.${this.currencyInfo.name}.kline.1min`
-    // 异步展示k线图
-    setTimeout(()=>{
-      // 初始化websoket
-      // K线图websoket连接
-      this.handleInitWebsoket()
-      this.handleNavClick(0,'1min')
-    },1000)
-  },
-  deactivated() {
-    // 离开页面关闭连接
-    this.socketK.close()
-    window.clearInterval(this.interval)
+  watch:{
+    '$route':function(to) {
+      // 离开页面关闭连接
+      if(this.socketK.close) this.socketK.close()
+      window.clearInterval(this.interval)
+      this.currencyInfo = to.query
+       // 更改k线图请求接口
+      this.requestK.req = `market.${this.currencyInfo.name}.kline.1min`
+      this.subK.sub = `market.${this.currencyInfo.name}.kline.1min`
+      // 异步展示k线图
+      setTimeout(()=>{
+        // 初始化websoket
+        // K线图websoket连接
+        this.handleInitWebsoket()
+        this.handleNavClick(0,'1min')
+      },1000)
+    }
   },
   methods:{
       // 点击切换时间
@@ -251,7 +253,6 @@ export default {
         const self = this
         let myChart = echarts.init(this.$refs.chartBox)
         // 绿色、红色、紫色、浅蓝、深蓝、黄色
-        let colors = ['#09b699', '#d74a5d', '#bd9fe5', '#79879a', '#7e8da3', '#ece3c2']
         let data = utils.splitData(this.chartData)
         let Zstart = self.Zstart
         let Zend = self.Zend
@@ -664,7 +665,6 @@ export default {
   }
   .data-box {
     display: flex;
-    background-color: #131f31;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
@@ -687,7 +687,6 @@ export default {
     // 导航按钮
   .nav-box {
     display: flex;
-    background-color: #131f31;
     justify-content: space-between;
     padding: 0 12px;
     width: 100%;

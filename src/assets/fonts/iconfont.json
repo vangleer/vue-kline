@@ -1,0 +1,51 @@
+{
+  "id": "2355305",
+  "name": "vue-kline",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8390803",
+      "name": "EOS",
+      "font_class": "EOS2",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "7891245",
+      "name": "eth",
+      "font_class": "eth",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "10883586",
+      "name": "EOS",
+      "font_class": "EOS",
+      "unicode": "e66d",
+      "unicode_decimal": 58989
+    },
+    {
+      "icon_id": "12504761",
+      "name": "-eth",
+      "font_class": "-eth",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "13377710",
+      "name": "比特币",
+      "font_class": "bitebi",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "18567098",
+      "name": "比特币",
+      "font_class": "bitebi1",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    }
+  ]
+}
