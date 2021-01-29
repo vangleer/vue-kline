@@ -10,14 +10,13 @@
 
 ## 图片参考
 
-<p align="center">
-    <img src="https://java0088.github.io/vue-kline/dist/img/theme1.png" alt="npm version" />
-</p>
-<p align="center">
-    <img src="https://java0088.github.io/vue-kline/dist/img/theme2.png" alt="npm version" />
-</p>
-<p align="center">
-    <img src="https://java0088.github.io/vue-kline/dist/img/theme3.png" alt="npm version" />
-</p>
+![蓝色主题](https://java0088.github.io/vue-kline/dist/img/theme1.png)
+<br />
+
+![白色主题](https://java0088.github.io/vue-kline/dist/img/theme2.png)
+
+<br />
+
+![自定义主题](https://java0088.github.io/vue-kline/dist/img/theme3.png)
 
 ## 火币接口参考文档 https://www.cnblogs.com/zhuminghui/p/8977417.html
