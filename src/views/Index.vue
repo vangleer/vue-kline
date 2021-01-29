@@ -2,8 +2,9 @@
   <div class="content">
       <div class="data-box">
         <div class="left">
-          <h3>{{100.00}}</h3>
-          <div class="rate">≈{{123456}}CNY</div>
+          <!-- 仅供展示 -->
+          <h3>{{titleCal.end_price|toFixed(4)}}</h3>
+          <div class="rate">≈{{titleCal.end_price|toFixed(4)}}CNY</div>
         </div>
       </div>
       <!-- 导航按钮 -->
@@ -127,6 +128,17 @@ export default {
       },1000)
     }
   },
+  created() {
+    this.requestK.req = `market.${this.currencyInfo.name}.kline.1min`
+    this.subK.sub = `market.${this.currencyInfo.name}.kline.1min`
+    // 异步展示k线图
+    setTimeout(()=>{
+      // 初始化websoket
+      // K线图websoket连接
+      this.handleInitWebsoket()
+      this.handleNavClick(0,'1min')
+    },1000)
+  },
   methods:{
       // 点击切换时间
       handleNavClick(index,opt) {
@@ -137,7 +149,7 @@ export default {
         }
         this.chartData = []
         this.chartOtherData = []
-        this.socketK.close()
+        if(this.socketK.close) this.socketK.close()
         clearTimeout(this.interval)
         this.currentNav = index;
         this.requestK.req = `market.${name}.kline.${opt}`

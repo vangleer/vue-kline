@@ -1,7 +1,7 @@
 <template>
   <div id="app" :style="{backgroundColor:bgColor}">
     <!-- 头部 -->
-    <nav-bar title="K线图" :background-color="bgColor"/>
+    <nav-bar :title="title" :background-color="bgColor"/>
 
     <!-- 路由组件 -->
     <keep-alive>
@@ -25,8 +25,15 @@ export default {
   watch:{
     '$route':function(to) {
       let index = parseInt(to.query.type)
-      console.log('lalalala',index)
+      this.title = `K线图-${to.query.enName}/USDT`
       this.bgColor = bgColors[index]
+    }
+  },
+  mounted() {
+    if(this.$route.query.name) {
+      this.active = parseInt(this.$route.query.type)
+      this.bgColor = bgColors[this.active]
+      this.title = `K线图-${this.$route.query.name}/USDT`
     }
   },
   data() {
@@ -37,7 +44,8 @@ export default {
         {id:2,cnName:'柚子币',name:'eosusdt',enName:'EOS',icon:'k-icon-eos-o',activeIcon:'k-icon-eos'},
       ],
       active:0,
-      bgColor:bgColors[0]
+      bgColor:bgColors[0],
+      title:'K线图-BTC/USDT'
     }
   }
 }

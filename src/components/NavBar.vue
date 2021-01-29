@@ -1,8 +1,8 @@
 <template>
   <div class="k-nav-bar" :style="{backgroundColor,color}">
-    <div class="k-nav-left">左</div>
-    <div class="k-nav-title">K线图</div>
-    <div class="k-nav-right">右</div>
+    <div class="k-nav-left"></div>
+    <div class="k-nav-title">{{title}}</div>
+    <div class="k-nav-right" @click="handleUrlClick"><img class="img-icon" src="../assets/imgs/github_icon.png" alt=""></div>
   </div>
 </template>
 
@@ -32,6 +32,9 @@
       },
       handleRightClick() {
         this.$emit('click-right')
+      },
+      handleUrlClick() {
+        window.open('https://github.com/java0088/vue-kline')
       }
     }
   }
@@ -73,5 +76,9 @@
   }
   .k-nav-right {
     right: 0px;
+  }
+  .img-icon {
+    width: 22px;
+    height: 22px;
   }
 </style>
