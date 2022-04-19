@@ -73,7 +73,7 @@
 import echarts from "echarts"
 import pako from 'pako'
 import utils from '../utils/utils.js'
-import {colors} from '../config/index'
+import { colors, huobiWsUrl } from '../config/index'
 export default {
   data() {
     return {
@@ -101,7 +101,7 @@ export default {
         interval: null,
         flag: false,
          // K 线相关
-        haurl:'wss://api.huobiasia.vip/ws',
+        haurl: huobiWsUrl,
         requestK: {req: 'market.eosusdt.kline.1min'},
         subK:{sub: 'market.eosusdt.kline.1min'},
         socketK:{},
@@ -172,7 +172,9 @@ export default {
           let reader = new FileReader()
           reader.onload = function(e) {
             let ploydata = new Uint8Array(e.target.result)
+            console.log(ploydata, 'ploydata')
             let msg = pako.inflate(ploydata, { to: 'string' })
+            console.log(msg, 'msgmsgmsgmsg')
             self.handleData(msg)
           }
           reader.readAsArrayBuffer(blob, 'utf-8')
