@@ -1,0 +1,142 @@
+.content {
+  margin: 50px 0px;
+  color: #6b809b;
+  overflow-y: auto;
+}
+
+span {
+  font-size: 13px;
+}
+
+.data-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 12px;
+  color: #707f9c;
+  font-weight: 700;
+
+  .left {
+    width: 60%;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      height: 30px;
+      color: #0ca589;
+      margin: 0;
+    }
+  }
+}
+
+// 导航按钮
+.nav-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+  width: 100%;
+  height: 40px;
+
+  .item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    height: 100%;
+  }
+
+  .active {
+    color: #0563e1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #0563e1;
+    }
+  }
+}
+
+// 图表部分
+.chart-box {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  background-size: 100% 88%;
+  border-top: 1px solid rgba(185, 192, 202, 0.2);
+  border-bottom: 1px solid rgba(185, 192, 202, 0.2);
+
+  .top {
+    position: absolute;
+    z-index: 900;
+    top: 5px;
+    left: 5px;
+
+    span {
+      margin-right: 10px;
+    }
+  }
+
+  .middle {
+    position: absolute;
+    z-index: 900;
+    top: 74%;
+    left: 5px;
+
+    span {
+      margin-right: 10px;
+    }
+  }
+
+  .bom {
+    position: absolute;
+    z-index: 900;
+    top: 75%;
+    left: 5px;
+
+    span {
+      margin-right: 10px;
+    }
+  }
+
+  .tool-box {
+    position: absolute;
+    z-index: 900;
+    top: 6px;
+    right: 10px;
+    width: 120px;
+    border: 1px solid #6c7c93;
+    background-color: rgba(8, 24, 37, 0.7);
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      margin: 2px 2px;
+    }
+  }
+
+  .pos-left {
+    left: 5px;
+  }
+
+  .pos-right {
+    right: 5px;
+  }
+
+  .chart {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.yellow-color {
+  color: #f2daaf;
+}

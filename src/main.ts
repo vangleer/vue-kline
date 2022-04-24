@@ -5,4 +5,6 @@ import App from './App.vue'
 import './assets/css/base.css'
 // 导入字体图标
 import './assets/fonts/iconfont.css'
-createApp(App).use(router).mount('#app')
+
+const app = createApp(App)
+app.use(router).mount('#app')
