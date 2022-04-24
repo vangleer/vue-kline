@@ -123,13 +123,16 @@ watch(() => route.query, query => {
 
 const handleNavClick = (index, opt) => {
   const { name } = state.currencyInfo
+  console.log(name, 'namenamenamenamenamename')
   if(index !== 0) {
     state.Zstart = 90
     state.Zend = 80
   }
   state.chartData = []
   state.chartOtherData = []
-  if(state.socketK.close) state.socketK.close()
+  if(state.socketK.close) {
+    state.socketK.close()
+  }
   clearTimeout(state.interval)
   state.currentNav = index;
   state.requestK.req = `market.${name}.kline.${opt}`
