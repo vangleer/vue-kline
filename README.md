@@ -28,7 +28,7 @@ master分支默认是vue3的
 
 ![自定义主题](https://java0088.github.io/vue-kline/dist/img/theme3.png)
 
-## 火币接口参考文档 https://www.cnblogs.com/zhuminghui/p/8977417.html
+## 火币接口参考文档 https://huobiapi.github.io/docs/spot/v1/cn/#websocket
 
 ## GitHub Pages https://java0088.github.io/vue-kline/dist/#/
 
