@@ -1,12 +1,15 @@
 # vue-kline (使用 Vue 对接火币 k 线图数据)
 
 ## 使用技术 Vue、Echarts、WebSocket
+支持vue2和vue3
+master分支默认是vue3的
 
 ## 下载说明
 
 - 该项目仅供参考，直接下载到本地运行查看
 - 下载项目后，npm install 一下
 - npm run serve 运行项目查看效果
+- 火币地址可能会有变化，如果页面websocket连接不上，在config/index.ts中列了3个地址，可以换着试试
 
 ## 一些文件说明
 
