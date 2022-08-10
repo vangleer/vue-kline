@@ -1,12 +1,15 @@
 # vue-kline (使用 Vue 对接火币 k 线图数据)
 
 ## 使用技术 Vue、Echarts、WebSocket
+支持vue2和vue3
+master分支默认是vue3的
 
 ## 下载说明
 
 - 该项目仅供参考，直接下载到本地运行查看
 - 下载项目后，npm install 一下
 - npm run serve 运行项目查看效果
+- 火币地址可能会有变化，如果页面websocket连接不上，在config/index.ts中列了3个地址，可以换着试试
 
 ## 一些文件说明
 
@@ -16,17 +19,17 @@
 
 ## 图片参考
 
-![蓝色主题](https://java0088.github.io/vue-kline/dist/img/theme1.png)
+![蓝色主题](https://vangleer.github.io/vue-kline/dist/img/theme1.png)
 <br />
 
-![白色主题](https://java0088.github.io/vue-kline/dist/img/theme2.png)
+![白色主题](https://vangleer.github.io/vue-kline/dist/img/theme2.png)
 
 <br />
 
-![自定义主题](https://java0088.github.io/vue-kline/dist/img/theme3.png)
+![自定义主题](https://vangleer.github.io/vue-kline/dist/img/theme3.png)
 
-## 火币接口参考文档 https://www.cnblogs.com/zhuminghui/p/8977417.html
+## 火币接口参考文档 https://huobiapi.github.io/docs/spot/v1/cn/#websocket
 
-## GitHub Pages https://java0088.github.io/vue-kline/dist/#/
+## GitHub Pages https://vangleer.github.io/vue-kline/dist/#/
 
 如果这个能帮助到你, 请点击 star 来支持我噢. ^\_^
