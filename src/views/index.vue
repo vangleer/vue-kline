@@ -78,7 +78,7 @@ import { toFixed, getFormatDate } from '../utils/utils'
 import utils from '../utils/utils'
 import bgImg from '../assets/imgs/bg2.png'
 import * as echarts from 'echarts'
-const state = reactive({
+const state = reactive<any>({
   usdtPrice: 8, // https://api.huobiasia.vip/market/tickers 可以调用这个借口获取，这里默认为8
   currentNav: 0,
   currencyInfo: { name: 'btcusdt', enName: 'BTC' } as any,

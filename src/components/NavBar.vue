@@ -9,7 +9,8 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import { defineProps, defineEmits } from 'vue'
+const emit = defineEmits(['click-left', 'click-right'])
 defineProps({
   title: {
     type: String,
@@ -25,9 +26,9 @@ defineProps({
   }
 })
 
-const handleLeftClick = () => this.$emit('click-left')
+const handleLeftClick = () => emit('click-left')
 
-const handleRightClick = () => this.$emit('click-right')
+const handleRightClick = () => emit('click-right')
 
 const handleUrlClick = () => window.open('https://github.com/vangleer/vue-kline')
 
